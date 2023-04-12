@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import SearchBar from "../SearchBar/SearchBar"
 import Movie from '../Movie/Movie';
 import useData from '../../hooks/useData';
 
@@ -31,13 +32,10 @@ const App = () => {
       <h1>Movie App</h1>
 
 
-      <input 
-      type="text"
-      placeholder='Search...'
-      value={searchValue}
-      onChange={onSearchValueChange}
-       />
-
+     <SearchBar
+      searchValue={searchValue} 
+      onSearchValueChange={onSearchValueChange}
+     />
 
 
 
