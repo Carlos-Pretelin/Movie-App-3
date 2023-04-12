@@ -4,6 +4,7 @@ import Movie from '../Movie/Movie';
 import useData from '../../hooks/useData';
 
 import "./App.scss"
+import Slider from '../Slider/Slider';
 
 
 
@@ -20,8 +21,6 @@ const App = () => {
     setSearchValue,
     searchedMedia,
     onSearchValueChange,
-
-
   } = useData();
 
   
@@ -31,19 +30,15 @@ const App = () => {
 
       <h1>Movie App</h1>
 
-
+      
      <SearchBar
       searchValue={searchValue} 
       onSearchValueChange={onSearchValueChange}
      />
 
 
-
-      {searchedMedia.map( movie => (
-
-       <Movie movie={movie} key={movie.name}/>
-
-      ))}
+     <Slider/>
+      
 
 
 

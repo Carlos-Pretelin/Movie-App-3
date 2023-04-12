@@ -1,5 +1,9 @@
 import React from 'react'
-import useData from '../../hooks/useData'
+//import useData from '../../hooks/useData'
+
+
+import "./SearchBar.scss"
+
 
 const SearchBar = ({searchValue, onSearchValueChange}) => {
 
