@@ -27,7 +27,27 @@ const defaultMovies = [
                 name:"Super Mario Bros The Movie",
                 description: "This is a movie description This is a movie description This is a movie description",
                 poster: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7k4fOuxA4vhblSSa5cTDRLlR7jU.jpg"
-            }
+            },
+            {
+                name:"Interestelar",
+                description: "This is a movie description This is a movie description This is a movie description",
+                poster: "https://www.themoviedb.org/t/p/original/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg"
+            },
+            {
+                name:"Pulp Fiction",
+                description: "This is a movie description This is a movie description This is a movie description",
+                poster: "https://www.themoviedb.org/t/p/original/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg"
+            },
+            {
+                name:"Avatar Way of Water",
+                description: "This is a movie description This is a movie description This is a movie description",
+                poster: "https://www.themoviedb.org/t/p/original/bqOqQ2Tawum3eHKNrc94P4EeaZB.jpg"
+            },
+            {
+                name:"John Wick 4",
+                description: "This is a movie description This is a movie description This is a movie description",
+                poster: "https://www.themoviedb.org/t/p/original/mj2Z9HnRSIEk3n7yVPoOY4Uzzfh.jpg"
+            },
 ];    
       
         
@@ -35,6 +55,16 @@ const defaultMovies = [
   const [movies, setMovies] = useState(defaultMovies);
 
   const [searchValue, setSearchValue] = useState("");
+
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const modalToggle = ()=> {
+    setOpenModal(!openModal)
+    console.log(openModal)
+  }
+
+
 
   let searchedMedia = [];
 
@@ -62,6 +92,10 @@ const defaultMovies = [
     setSearchValue,
     searchedMedia,
     onSearchValueChange,
+    openModal,
+    setOpenModal,
+    modalToggle
+
 
 
   }

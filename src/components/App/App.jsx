@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import SearchBar from "../SearchBar/SearchBar"
-import Movie from '../Movie/Movie';
+import Modal from '../Modal/Modal';
+
+
 import useData from '../../hooks/useData';
 
 import "./App.scss"
@@ -21,7 +23,12 @@ const App = () => {
     setSearchValue,
     searchedMedia,
     onSearchValueChange,
+    openModal,
+    setOpenModal,
+    modalToggle
   } = useData();
+
+ 
 
   
 
@@ -37,7 +44,18 @@ const App = () => {
      />
 
 
-     <Slider searchedMedia={searchedMedia}/>
+     <Slider 
+     searchedMedia={searchedMedia} 
+    //  toggle={modalToggle}
+     />
+
+    {openModal ? 
+    <Modal
+     openModal={openModal}
+     setOpenModal={setOpenModal}
+     />
+     : null
+    }
       
 
 
