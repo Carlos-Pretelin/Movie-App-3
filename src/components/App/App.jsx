@@ -37,7 +37,7 @@ const App = () => {
      />
 
 
-     <Slider/>
+     <Slider searchedMedia={searchedMedia}/>
       
 
 

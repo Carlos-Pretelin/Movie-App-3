@@ -5,9 +5,9 @@ import Movie from '../Movie/Movie'
 
 import "./Slider.scss"
 
-const Slider = () => {
+const Slider = ({searchedMedia}) => {
 
-    const {searchedMedia} = useData()
+    //const {searchedMedia} = useData()
   return (
     <div className='Slider'>
 

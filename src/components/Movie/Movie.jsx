@@ -9,8 +9,8 @@ const Movie = ({movie}) => {
     
     <div className='Movie'>
 
-    <h1>{movie.name}</h1>
-    <h2>{movie.description}</h2>
+    {/* <h1>{movie.name}</h1>
+    <h2>{movie.description}</h2> */}
     <img src={movie.poster} alt="movie poster" />
 
     
